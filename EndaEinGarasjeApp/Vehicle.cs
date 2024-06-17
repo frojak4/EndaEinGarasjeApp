@@ -15,7 +15,7 @@ namespace EndaEinGarasjeApp
         private int _speed;
         public int distance;
 
-        public Vehicle(string brand, string model, int year, int speed, int wheels)
+        public Vehicle(string brand, string model, int year,int wheels, int speed)
         {
             _speed = speed;
             _brand = brand;

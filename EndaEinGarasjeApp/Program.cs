@@ -20,7 +20,7 @@
                 Console.Clear();
                 Console.WriteLine("What do you want to do?");
                 Console.WriteLine("1. See all vehicles");
-                Console.WriteLine("2. See cars");
+                Console.WriteLine("2. See Cars");
                 Console.WriteLine("3. See Boats");
                 Console.WriteLine("4. See Planes");
                 Console.WriteLine("5. Add new Vehicle");

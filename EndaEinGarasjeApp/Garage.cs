@@ -12,14 +12,14 @@ namespace EndaEinGarasjeApp
         {
             new Car("Ford", "Focus", 1999, 4, 120),
             new Car("Toyota", "Camry", 2020, 4, 217),
-            new Car("Honda", "Accord", 2021, 125, 4),
-            new Car("Ford", "Mustang", 2022, 155, 4),
-            new Boat("Boston Whaler", "280 Outrage", 2019, 55, 0),
-            new Boat("Yamaha", "242X E-Series", 2020, 50, 0),
-            new Boat("Sea Ray", "SLX 400", 2021, 43, 0),
-            new Plane("Cessna", "172 Skyhawk", 2018, 140, 3),
-            new Plane("Boeing", "737", 2015, 588, 6),
-            new Plane("Airbus", "A320", 2017, 511, 6)
+            new Car("Honda", "Accord", 2021, 4, 125),
+            new Car("Ford", "Mustang", 2022, 4, 155),
+            new Boat("Boston Whaler", "280 Outrage", 2019, 0, 55),
+            new Boat("Yamaha", "242X E-Series", 2020, 0, 50),
+            new Boat("Sea Ray", "SLX 400", 2021, 0, 43),
+            new Plane("Cessna", "172 Skyhawk", 2018, 3, 140),
+            new Plane("Boeing", "737", 2015, 6, 588),
+            new Plane("Airbus", "A320", 2017, 6, 511)
 
         };
 
@@ -148,8 +148,12 @@ namespace EndaEinGarasjeApp
             Console.Clear();
             Console.WriteLine("What's the first vehicle?");
             Vehicle vehicle1 = GarageList[ChooseVehicle()];
+            Console.Clear();
             Console.WriteLine("What's the second vehicle?");
             Vehicle vehicle2 = GarageList[ChooseVehicle()];
+
+            vehicle1.distance = 0;
+            vehicle2.distance = 0;
 
             while (vehicle1.distance < 1000 && vehicle2.distance < 1000)
             {

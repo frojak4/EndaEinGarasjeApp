@@ -10,7 +10,6 @@ namespace EndaEinGarasjeApp
     {
         public Car(string brand, string model, int year, int wheels, int speed) : base(brand, model, year, wheels, speed)
         {
-            wheels = 4;
         }
 
 
