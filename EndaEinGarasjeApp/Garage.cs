@@ -155,11 +155,41 @@ namespace EndaEinGarasjeApp
             vehicle1.distance = 0;
             vehicle2.distance = 0;
 
-            while (vehicle1.distance < 1000 && vehicle2.distance < 1000)
+            Console.Clear();
+            Console.WriteLine("What distance do you want to race?");
+            Console.WriteLine("1. 500 meters");
+            Console.WriteLine("2. 1000 meters");
+            Console.WriteLine("3. 2000 meters");
+            Console.WriteLine("4. 5000 meters");
+
+            string userInput = Console.ReadLine();
+            int distance;
+            switch (userInput)
+            {
+                case "1":
+                    distance = 500;
+                    break;
+                case "2":
+                    distance = 1000;
+                    break;
+                case "3":
+                    distance = 2000;
+                    break;
+                case "4":
+                    distance = 5000;
+                    break;
+                default:
+                    distance = 1000;
+                    break;
+            }
+
+
+
+            while (vehicle1.distance < distance && vehicle2.distance < distance)
             {
                 Console.Clear();
                 Console.WriteLine($"{vehicle1.getBrand()}, {vehicle1.getModel()} \t \t {vehicle2.getBrand()}, {vehicle2.getModel()}");
-                Console.WriteLine($"{vehicle1.distance} / 1000 \t \t \t {vehicle2.distance} / 1000");
+                Console.WriteLine($"{vehicle1.distance} / {distance} \t \t \t {vehicle2.distance} / {distance}");
                 vehicle1.distance += vehicle1.getSpeed();
                 vehicle2.distance += vehicle2.getSpeed();
                 Thread.Sleep(500);
